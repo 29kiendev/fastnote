@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlashNote</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(59,130,246,0.18), transparent 28%),
+        radial-gradient(circle at 20% 70%, rgba(250,204,21,0.12), transparent 20%),
+        radial-gradient(circle at 80% 80%, rgba(34,197,94,0.12), transparent 20%),
+        #050816;
+      font-family: Inter, Arial, sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #facc15;
+      box-shadow: 0 0 16px rgba(250,204,21,0.9);
+    }
+
+    .badge span {
+      font-size: 13px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .logo {
+      font-size: clamp(48px, 9vw, 86px);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, #ffffff, rgba(255,255,255,0.72));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 56px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+	  margin: 80px 0 0 0;
+    }
+
+    .btn {
+      width: 110px;
+      height: 110px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      font-size: 40px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-6px) scale(1.04);
+      opacity: 0.96;
+    }
+
+    .btn-k {
+      background: #facc15;
+      color: #000;
+      box-shadow: 0 0 30px rgba(250,204,21,0.28);
+    }
+
+    .btn-h {
+      background: #22c55e;
+      color: white;
+      box-shadow: 0 0 30px rgba(34,197,94,0.28);
+    }
+
+    .btn-m {
+      background: #3b82f6;
+      color: white;
+      box-shadow: 0 0 30px rgba(59,130,246,0.28);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">
+      <div class="dot"></div>
+      <span>Super fast & light notes</span>
+    </div>
+
+    <h1 class="logo">FlashNote</h1>
+    <p class="subtitle"> No server</p> 
+
+    <div class="buttons">
+		<button class="btn btn-k" onclick="window.location.href='fastnote/k/index.html'">K</button>
+
+		<button class="btn btn-h" onclick="window.location.href='fastnote/h/index.html'">H</button>
+
+		<button class="btn btn-m" onclick="window.location.href='fastnote/m/index.html'">M</button>
+    </div>
+  </div>
+</body>
+</html>
